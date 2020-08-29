@@ -22,11 +22,11 @@ steps:
     path: $(MAVEN_CACHE_FOLDER)
   displayName: Cache Maven local repo
 
-- task: MavenAuthenticate@0
-  inputs:
-    artifactsFeeds: 'samitkumarpatel'
-    mavenServiceConnections: 'samitkumarpatel-feed'
-  displayName: Maven Auth
+# - task: MavenAuthenticate@0
+#   inputs:
+#     artifactsFeeds: 'samitkumarpatel'
+#     mavenServiceConnections: 'samitkumarpatel-feed'
+#   displayName: Maven Auth
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -37,7 +37,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
+    mavenAuthenticateFeed: true
     effectivePomSkip: true
     sonarQubeRunAnalysis: false
   displayName: Maven Build
