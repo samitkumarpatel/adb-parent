@@ -18,7 +18,36 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-
+	<distributionManagement>
+		<snapshotRepository>
+			<id>samitkumarpatel</id>
+			<url>https://pkgs.dev.azure.com/samitkumarpatel/_packaging/samitkumarpatel/maven/v1</url>
+		</snapshotRepository>
+		<repository>
+			<id>samitkumarpatel</id>
+			<url>https://pkgs.dev.azure.com/samitkumarpatel/_packaging/samitkumarpatel/maven/v1</url>
+			<!--
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			-->
+		</repository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>samitkumarpatel</id>
+			<url>https://pkgs.dev.azure.com/samitkumarpatel/_packaging/samitkumarpatel/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<dependencyManagement>
 		<dependencies>
 		   <dependency>
